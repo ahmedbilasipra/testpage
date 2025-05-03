@@ -226,6 +226,13 @@
         .hero-section .category-icon i {
             animation: glow 2s infinite ease-in-out;
         }
+        
+        /* Hide specific menu items in mobile view */
+        @media (max-width: 991.98px) {
+            .hide-on-mobile {
+                display: none !important;
+            }
+        }
     </style>
 </head>
 <body>
@@ -239,7 +246,8 @@
             </button>
             <div class="collapse navbar-collapse" id="policyBazaarNav">
                 <ul class="navbar-nav ms-auto align-items-center">
-                    <li class="nav-item dropdown mega-dropdown">
+                    <!-- Desktop Only Menu Items -->
+                    <li class="nav-item dropdown mega-dropdown d-none d-lg-block">
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
                             Insurance Products
                             <span class="underline-animation"></span>
@@ -328,7 +336,7 @@
                             </div>
                         </div>
                     </li>
-                    <li class="nav-item dropdown">
+                    <li class="nav-item dropdown d-none d-lg-block">
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
                             Renew Your Policy
                             <span class="underline-animation"></span>
@@ -372,7 +380,7 @@
                             </div>
                         </div>
                     </li>
-                    <li class="nav-item dropdown">
+                    <li class="nav-item dropdown d-none d-lg-block">
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
                             Claim
                             <span class="underline-animation"></span>
@@ -416,7 +424,7 @@
                             </div>
                         </div>
                     </li>
-                    <li class="nav-item dropdown">
+                    <li class="nav-item dropdown d-none d-lg-block">
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
                             Support
                             <span class="underline-animation"></span>
@@ -493,13 +501,60 @@
                             </div>
                         </div>
                     </li>
-                    <li class="nav-item ms-3">
+
+                    <!-- Mobile Only: My Account Section -->
+                    <li class="nav-item d-lg-none border-top mt-3">
+                        <div class="fw-bold text-primary mt-3 mb-2 ps-3">My Account</div>
+                        <div class="ps-3">
+                            <a class="nav-link py-2" href="#"><i class="bi bi-grid-1x2 me-2"></i>Dashboard</a>
+                            <a class="nav-link py-2" href="#"><i class="bi bi-file-text me-2"></i>Policies</a>
+                            <a class="nav-link py-2" href="#"><i class="bi bi-question-circle me-2"></i>Get help</a>
+                            <a class="nav-link py-2" href="#"><i class="bi bi-bell me-2"></i>Manage communication preferences</a>
+                            <a class="nav-link py-2" href="#"><i class="bi bi-person-check me-2"></i>Verify your advisor</a>
+                        </div>
+                    </li>
+                    <!-- Mobile Only: Contact Section -->
+                    <li class="nav-item d-lg-none border-top mt-3">
+                        <div class="fw-bold text-primary mt-3 mb-2 ps-3">Contact us</div>
+                        <div class="row g-2 px-3 mb-3">
+                            <div class="col-4">
+                                <div class="text-center p-2 border rounded">
+                                    <i class="bi bi-whatsapp text-success fs-4"></i>
+                                    <div style="font-size: 12px;">Whatsapp</div>
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <div class="text-center p-2 border rounded">
+                                    <i class="bi bi-geo-alt text-primary fs-4"></i>
+                                    <div style="font-size: 12px;">Stores</div>
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <div class="text-center p-2 border rounded">
+                                    <i class="bi bi-telephone text-info fs-4"></i>
+                                    <div style="font-size: 12px;">Call us</div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <!-- Mobile Only: Talk to Expert & Sign In -->
+                    <li class="nav-item d-lg-none">
+                        <a class="btn btn-talk w-100 my-2" href="#">
+                            <i class="bi bi-telephone-fill"></i>
+                            <span>Talk to Expert</span>
+                        </a>
+                    </li>
+                    <li class="nav-item d-lg-none">
+                        <a class="btn btn-sign-in w-100" href="#">Sign in</a>
+                    </li>
+                    <!-- Desktop Only: Talk to Expert & Sign In -->
+                    <li class="nav-item ms-3 d-none d-lg-block">
                         <a class="btn btn-talk" href="#">
                             <i class="bi bi-telephone-fill"></i>
                             <span>Talk to Expert</span>
                         </a>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item d-none d-lg-block">
                         <a class="btn btn-sign-in" href="#">Sign in</a>
                     </li>
                 </ul>
@@ -1190,7 +1245,7 @@
       <h2 class="fw-bold mb-2" style="color: #22325c;">Have a question?<br>Here to help.</h2>
       <div style="width: 60px; height: 4px; background: #2962ff; border-radius: 2px; margin-bottom: 24px;"></div>
       <p class="mb-4" style="color: #5e6c84;">
-        Our friendly customer support team is your extended family. Speak your heart out. They listen with undivided attention to resolve your concerns. Give us a call, request a callback or drop us an email, we’re here to help.
+        Our friendly customer support team is your extended family. Speak your heart out. They listen with undivided attention to resolve your concerns. Give us a call, request a callback or drop us an email, we're here to help.
       </p>
       <div class="mb-3 p-3 border rounded-3 d-flex align-items-center" style="max-width: 400px;">
         <i class="bi bi-send fs-3 text-primary me-3"></i>
@@ -1219,7 +1274,7 @@
   <div class="container">
     <div class="row mb-4">
       <!-- Insurance -->
-      <div class="col-md-3 mb-4 mb-md-0">
+      <div class="col-md-2 mb-4 mb-md-0">
         <h6 class="fw-bold mb-3">Insurance</h6>
         <ul class="list-unstyled small">
           <li><a href="#" class="text-white-50 text-decoration-none">General Insurance</a></li>
@@ -1260,7 +1315,7 @@
         </ul>
       </div>
       <!-- Company -->
-      <div class="col-md-3">
+      <div class="col-md-4">
         <h6 class="fw-bold mb-3">Company</h6>
         <ul class="list-unstyled small">
           <li><a href="#" class="text-white-50 text-decoration-none">About Us</a></li>
